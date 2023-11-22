@@ -4,7 +4,7 @@ import FettleFooterApp from "./FettleFooterApp";
 
 function FettleApp(){
     return (
-        <div>
+        <div className='font-sans antialiased bg-gray-50'>
             <FettleHeaderApp />
 
             <FettleContainerApp />
