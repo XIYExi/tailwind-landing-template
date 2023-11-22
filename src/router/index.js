@@ -1,12 +1,17 @@
 import App from "../App";
-import BlocksApp from "../app/blocks/BlocksApp";
 import {createBrowserRouter} from "react-router-dom";
+import BlocksApp from "../app/blocks/BlocksApp";
 import BlogsApp from "../app/blogs/BlogsApp";
 import VoyageApp from "../app/voyage/VoyageApp";
 import TributaryApp from "../app/tributary/TributaryApp";
+import FettleApp from "../app/fettle/FettleApp";
 
 
 const routes = [
+    {
+      path: '/fettle',
+      element: <FettleApp />
+    },
     {
       path: '/tributary',
       element: <TributaryApp />
