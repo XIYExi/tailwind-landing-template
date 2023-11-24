@@ -1,4 +1,4 @@
-import {list, listName} from "./component/LeftSideNav";
+import {list, listName} from "./component/constants";
 import React from "react";
 import './App.css';
 

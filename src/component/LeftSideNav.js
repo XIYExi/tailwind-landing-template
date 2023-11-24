@@ -2,14 +2,9 @@ import {motion} from "framer-motion";
 import store from "../store/index"
 import React, {forwardRef, Fragment} from "react";
 import {observer} from "mobx-react";
+import {list, listName} from "./constants";
 
-import blocks from '../assets/blocks.png';
-import blogs from '../assets/blogs.png';
-import voyage from '../assets/voyage.png';
-import tributary from '../assets/tributary.png';
 
-export const list = [blocks, blogs, voyage, tributary];
-export const listName = ['blocks', 'blogs', 'voyage', 'tributary']
 
 
 const sidebar = {

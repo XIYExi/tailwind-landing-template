@@ -1,8 +1,20 @@
 import React, {useState} from "react";
+import classnames from 'classnames';
 
 function FettleHeaderApp(){
 
     const [open, setOpen] = useState(false);
+    const openWrapperClass = classnames({
+        'block': open,
+        'hidden': !open,
+        },
+        `z-40 px-6 fixed md:relative top-0 left-0 w-full md:w-auto h-screen md:h-auto md:flex flex-col md:flex-row items-center justify-start md:justify-end pt-32 md:pt-0 overflow-y-scroll md:overflow-visible bg-gray-200 text-gray-900 md:text-current md:bg-transparent leading-loose text-cyan-900 text-sm md:text-sm font-semibold tracking-widest uppercase font-heading`
+    )
+
+    const closeButtonClass = classnames({
+        'inline-block': open,
+        'hidden': !open,
+    })
 
     return(
         <React.Fragment>
@@ -11,7 +23,7 @@ function FettleHeaderApp(){
                 <div className='h-32 py-4 container mx-auto flex items-center justify-between relative z-10'>
                     <a href='#' className='uppercase font-bold text-2xl flex items-center justify-start h-full hover:opacity-50'>fettle</a>
                     <div className="relative z-40 flex-1 text-right">
-                        <div className={`${open && 'flex' || ''} ${(open === false) && 'hidden' || ''} z-40 px-6 fixed md:relative top-0 left-0 w-full md:w-auto h-screen md:h-auto md:flex flex-col md:flex-row items-center justify-start md:justify-end pt-32 md:pt-0 overflow-y-scroll md:overflow-visible bg-gray-200 text-gray-900 md:text-current md:bg-transparent leading-loose text-cyan-900 text-sm md:text-sm font-semibold tracking-widest hidden uppercase font-heading`}>
+                        <div className={openWrapperClass}>
                             <a href="#"
                                className="text-left block w-full md:w-auto border-b border-gray-300 md:border-none py-4 md:py-0 md:ml-8 hover:opacity-50">Home</a>
                             <a href="#"
@@ -44,7 +56,7 @@ function FettleHeaderApp(){
                                     </svg>
                                 </a>
                             </div>
-                            <button onClick={() => setOpen(false)} className={`${open && 'inline-block' || ''} ${!open && 'hidden' || ''} md:hidden absolute top-0 right-0 leading-none uppercase tracking-widest font-semibold z-50 hidden px-6 h-32 text-gray-900 flex items-center justify-center`}>
+                            <button onClick={() => setOpen(false)} className={`${closeButtonClass} md:hidden absolute top-0 right-0 leading-none uppercase tracking-widest font-semibold z-50 px-6 h-32 text-gray-900 flex items-center justify-center`}>
                                 Close
                             </button>
                         </div>
