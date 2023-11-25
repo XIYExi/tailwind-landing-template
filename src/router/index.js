@@ -10,9 +10,14 @@ import ImpulseApp from "../app/impulse/ImpulseApp";
 import FoundationApp from "../app/foundation/FoundationApp";
 import LoginApp from "../app/login/LoginApp";
 import ShoutApp from "../app/shout/ShoutApp";
+import SlateApp from "../app/slate/SlateApp";
 
 
 const routes = [
+    {
+      path: '/slate',
+      element: <SlateApp />
+    },
     {
       path: '/shout',
       element: <ShoutApp />
