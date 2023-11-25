@@ -9,7 +9,7 @@ function App() {
             <h1 className="px-4 mb-10 py-4 text-center font-thin text-xl border-t-2 border-b-2 border-gray-200">
                 Custom Layouts &amp; Templates
             </h1>
-            <a href="https://github.com/rossmcneil/free-tailwindcss-layouts"
+            <a href="https://github.com/XIYExi/tailwind-landing-template"
                className="bg-blue-200 text-blue-700 py-3 px-4 rounded-sm no-underline text-xs inline-block hover:bg-blue-300 hover:shadow-lg">
                 View on Github
             </a>

@@ -8,9 +8,19 @@ import FettleApp from "../app/fettle/FettleApp";
 import FullscreenApp from "../app/fullscreen/FullscreenApp";
 import ImpulseApp from "../app/impulse/ImpulseApp";
 import FoundationApp from "../app/foundation/FoundationApp";
+import LoginApp from "../app/login/LoginApp";
+import ShoutApp from "../app/shout/ShoutApp";
 
 
 const routes = [
+    {
+      path: '/shout',
+      element: <ShoutApp />
+    },
+    {
+      path: '/login',
+      element: <LoginApp />
+    },
     {
       path: '/foundation',
       element: <FoundationApp />
